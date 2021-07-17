@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePresupuesto" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fbc42583-52b6-4ea2-9bb4-24078ccf4119">
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="133"/>
+	<parameter name="codEmpresa" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\User01\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019045\\src\\org\\javiercabrera\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ReportePresupuesto($P{codEmpresa})]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="572" height="79" uuid="c77f4f0e-94dc-415d-96f3-98be9e072557"/>
+				<imageExpression><![CDATA["C:\\Users\\User01\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019045\\src\\org\\javiercabrera\\img\\Membrete.png"]]></imageExpression>
+			</image>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement stretchType="RelativeToBandHeight" x="15" y="18" width="51" height="50" uuid="7e43f85a-39ac-4e11-9b61-045565fdfc24"/>
+				<imageExpression><![CDATA["C:\\Users\\User01\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019045\\src\\org\\javiercabrera\\img\\Icono.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="79" y="32" width="100" height="20" uuid="6ae9bbfa-c4ee-456b-ab61-99f6e5299e12"/>
+				<textElement>
+					<font fontName="Lucida Calligraphy" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tony's Kinal]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="109" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="35" uuid="64492399-74dc-43f1-b053-d0d66c44e178"/>
+				<textElement textAlignment="Center">
+					<font fontName="Lucida Calligraphy" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte De Presupuestos]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="-19" y="37" width="608" height="72" uuid="a526048a-308e-48d5-bc6c-5e5d4b0064aa"/>
+				<subreportParameter name="codEmpresa">
+					<subreportParameterExpression><![CDATA[$P{codEmpresa}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReportePresupuesto.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="37" backcolor="#663300" uuid="a718c300-35b6-4831-a5a6-2e5513b7dd5f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="121" y="9" width="100" height="20" forecolor="#FFFFFF" uuid="e19892fa-c054-42d6-a0f1-ae108825aa40"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="7" y="8" width="100" height="20" forecolor="#FFFFFF" uuid="58f5cde2-c25c-4a64-859c-73bca1d3d2b5"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="9" width="100" height="20" forecolor="#FFFFFF" uuid="96578a9f-29c3-4ce7-806c-56cc4f79e51c"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="466" y="9" width="100" height="20" forecolor="#FFFFFF" uuid="5ea50658-7777-4b9a-86c0-bfd789ea679a"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono Contacto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="236" y="9" width="100" height="20" forecolor="#FFFFFF" uuid="76c14eba-33a2-4cd1-b54d-cf83646b55d1"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora Servicio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="37" width="572" height="1" forecolor="#000000" uuid="b45abc19-97e9-4b99-9e40-3b9f028ec23c"/>
+				<graphicElement>
+					<pen lineWidth="2.5"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="7" y="10" width="100" height="20" uuid="fc14fa71-dcb9-40d9-a945-b2cb981fe929"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{tipoServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="344" y="0" width="116" height="36" uuid="dedb042e-eb79-4c1c-b7b1-041690640473"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lugarServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="466" y="8" width="100" height="20" uuid="c250d8d6-b743-447b-a99e-a2c677bc9517"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{telefonoContacto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="8" width="100" height="20" uuid="4c6f9d93-2867-4674-8e5f-51237138fde1"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{fechaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="236" y="8" width="100" height="20" uuid="d35eba59-e1c1-4dc5-a010-87bdb4243031"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{horaServicio}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="572" height="79" uuid="5e2a3d61-f694-4f7e-b435-42eeb563c297"/>
+				<imageExpression><![CDATA["C:\\Users\\User01\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019045\\src\\org\\javiercabrera\\img\\Page_Footer.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

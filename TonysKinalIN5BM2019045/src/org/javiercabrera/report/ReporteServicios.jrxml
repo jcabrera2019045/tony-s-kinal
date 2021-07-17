@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteServicios" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d38947f6-3c8d-4332-93b9-6004f81b2bcd">
+	<property name="ireport.zoom" value="2.143588810000002"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="114"/>
+	<parameter name="codServicio" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ReporteServicios($P{codServicio})]]>
+	</queryString>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoPlato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cantidad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombrePlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcionPlato" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="precioPlato" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoTplato" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoProducto" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreProducto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="572" height="79" uuid="f078a19c-e320-4984-b62c-bb70b1d82181"/>
+				<imageExpression><![CDATA["C:\\Users\\User01\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019045\\src\\org\\javiercabrera\\img\\Membrete.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="72" y="32" width="100" height="20" uuid="b54a709e-198e-48ac-9891-e35a5fd98b63"/>
+				<textElement>
+					<font fontName="Lucida Calligraphy" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tony's Kinal]]></text>
+			</staticText>
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement stretchType="RelativeToBandHeight" x="10" y="17" width="51" height="50" uuid="4dc61eb2-178e-4634-947c-2ef4181aa3c7"/>
+				<imageExpression><![CDATA["C:\\Users\\User01\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019045\\src\\org\\javiercabrera\\img\\Icono.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="572" height="35" forecolor="#333333" uuid="eb3b8180-882f-4137-bfb6-2b0749a10bc1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Lucida Calligraphy" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte De Servicios]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="572" height="33" backcolor="#663300" uuid="69c43eac-6b3c-415b-a451-d24c11a8f113"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="14" y="6" width="100" height="20" forecolor="#FFFFFF" uuid="5e8f6f71-e152-4693-89c8-ee02cf4764be"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad Platos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="7" width="100" height="20" forecolor="#FFFFFF" uuid="ce42b51f-38d4-4054-aa67-82362d3e4aab"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Descripcion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="456" y="7" width="100" height="20" forecolor="#FFFFFF" uuid="794981ac-8e1f-40fb-bce3-2f7597eccd6c"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Producto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="7" width="100" height="20" forecolor="#FFFFFF" uuid="a4c74704-baac-41ed-981a-a6cfb072230a"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Plato]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="35" width="572" height="1" forecolor="#000000" uuid="46c3c8c8-ac0b-410a-8562-48e6312c80e9"/>
+				<graphicElement>
+					<pen lineWidth="2.5"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="14" y="7" width="100" height="20" uuid="64dc0252-9515-4986-8999-c02faa874629"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="7" width="100" height="20" uuid="cbc725b4-3d31-4626-ae41-d5e39d9703f0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="456" y="7" width="100" height="20" uuid="ee042030-31b8-4a4f-8444-038748062219"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreProducto}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="0" width="154" height="35" uuid="4c54181e-e128-4da0-8362-a4d3f01d1d47"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombrePlato}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="79" splitType="Stretch">
+			<image scaleImage="FillFrame">
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="572" height="79" uuid="19f85c53-d232-41b7-ade1-8ce2fdadb250"/>
+				<imageExpression><![CDATA["C:\\Users\\User01\\Documents\\NetBeansProjects\\TonysKinalIN5BM2019045\\src\\org\\javiercabrera\\img\\Page_Footer.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

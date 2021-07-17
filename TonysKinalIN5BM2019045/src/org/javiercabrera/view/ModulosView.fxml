@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javiercabrera.controller.ModuloController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="715.0" layoutX="-11.0">
+         <image>
+            <Image url="@../img/Fondo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="251.0" layoutY="14.0" text="Modulos" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="170.0" fitWidth="170.0" layoutX="450.0" layoutY="356.0" onMouseClicked="#ventanaProductos">
+         <image>
+            <Image url="@../img/productos.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="170.0" fitWidth="170.0" layoutX="51.0" layoutY="356.0" onMouseClicked="#ventanaTempleado">
+         <image>
+            <Image url="@../img/templeado.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="170.0" fitWidth="170.0" layoutX="450.0" layoutY="115.0" onMouseClicked="#ventanaTplato">
+         <image>
+            <Image url="@../img/tplato.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="170.0" fitWidth="170.0" layoutX="57.0" layoutY="115.0" onMouseClicked="#ventanaEmpresa">
+         <image>
+            <Image url="@../img/empresas.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="96.0" layoutY="300.0" text="Empresas" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="492.0" layoutY="300.0" text="Tipo Plato" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="73.0" layoutY="539.0" text="Tipo Empleado" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="493.0" layoutY="539.0" text="Productos" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="28.0" layoutY="21.0" onMouseClicked="#menuPrincipal" opacity="0.7">
+         <image>
+            <Image url="@../img/Regresar.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javiercabrera.controller.UnionController">
+   <children>
+      <ImageView fitHeight="503.0" fitWidth="715.0" layoutX="-11.0">
+         <image>
+            <Image url="@../img/Fondo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="279.0" layoutY="21.0" text="Union" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="28.0" layoutY="21.0" onMouseClicked="#menuPrincipal" opacity="0.7">
+         <image>
+            <Image url="@../img/Regresar.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="250.0" layoutX="222.0" layoutY="117.0" onMouseClicked="#ventanaServicioEmpleados">
+         <image>
+            <Image url="@../img/servicios_has_empleados.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="170.0" fitWidth="170.0" layoutX="45.0" layoutY="287.0" onMouseClicked="#ventanaServicioPlatos">
+         <image>
+            <Image url="@../img/servicios_has_platos.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="170.0" fitWidth="170.0" layoutX="472.0" layoutY="287.0" onMouseClicked="#ventanaProductoPlatos">
+         <image>
+            <Image url="@../img/productos_has_platos.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="283.0" layoutY="277.0" text="Servicio Empleados" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="469.0" text="Servicio Platos" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="505.0" layoutY="469.0" text="Producto Platos" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

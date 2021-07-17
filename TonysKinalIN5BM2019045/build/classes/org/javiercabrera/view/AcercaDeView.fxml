@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="570.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javiercabrera.controller.AcercaDeController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="580.0" layoutX="-5.0">
+         <image>
+            <Image url="@../img/Fondo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="163.0" layoutY="24.0" text="Datos del Programador" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="270.0" fitWidth="150.0" layoutX="352.0" layoutY="85.0">
+         <image>
+            <Image url="@../img/foto_personal.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="58.0" layoutY="101.0" text="Nombres:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="134.0" text="Apellidos:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="171.0" text="Codigo Tecnico:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="58.0" layoutY="206.0" text="Carné:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="101.0" text="Javier Antonio" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="131.0" layoutY="134.0" text="Cabrera Guzmán" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="176.0" layoutY="171.0" text="IN5BM" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="111.0" layoutY="206.0" text="20190-045" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="130.0" fitWidth="110.0" layoutX="58.0" layoutY="250.0">
+         <image>
+            <Image url="@../img/logo_kinal.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="23.0" layoutY="14.0" onMouseClicked="#menuPrincipal" opacity="0.7">
+         <image>
+            <Image url="@../img/Regresar.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javiercabrera.controller.EmpleadosController">
+   <children>
+      <ImageView fitHeight="740.0" fitWidth="915.0" layoutY="-5.0">
+         <image>
+            <Image url="@../img/Fondo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="425.0" layoutY="14.0" text="Empleados" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCodigoEmpleado" layoutX="222.0" layoutY="82.0" text="Código Empleado" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="222.0" layoutY="119.0" text="Apellido Empleado" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="222.0" layoutY="157.0" text="Nombre Empleado" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="222.0" layoutY="194.0" text="Dirección Empleado" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoEmpleado" layoutX="361.0" layoutY="78.0" opacity="0.7" prefHeight="25.0" prefWidth="122.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDireccionEmpleado" layoutX="361.0" layoutY="190.0" opacity="0.7" prefHeight="25.0" prefWidth="122.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtApellidoEmpleado" layoutX="361.0" layoutY="115.0" opacity="0.7" prefHeight="25.0" prefWidth="373.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtNombreEmpleado" layoutX="361.0" layoutY="153.0" opacity="0.7" prefHeight="25.0" prefWidth="373.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tblEmpleados" layoutX="23.0" layoutY="365.0" onKeyPressed="#seleccionarElementos" onMouseClicked="#seleccionarElementos" prefHeight="255.0" prefWidth="871.0">
+        <columns>
+          <TableColumn fx:id="colCodigoEmpleado" prefWidth="129.0" text="Código Empleado" />
+          <TableColumn fx:id="colApellidoEmpleado" prefWidth="119.0" text="Apellido Empleado" />
+            <TableColumn fx:id="colNombreEmpleado" minWidth="0.0" prefWidth="128.0" text="Nombre Empleado" />
+            <TableColumn fx:id="colDireccionEmpleado" minWidth="7.0" prefWidth="124.0" text="Direccion Empleado" />
+            <TableColumn fx:id="colTelefonoContacto" minWidth="7.0" prefWidth="124.0" text="Telefono" />
+            <TableColumn fx:id="colGradoCocinero" minWidth="7.0" prefWidth="124.0" text="Grado Cocinero" />
+            <TableColumn fx:id="colTempleado" minWidth="7.0" prefWidth="124.0" text="Tipo Empleado" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="45.0" layoutY="650.0" mnemonicParsing="false" onAction="#Nuevo" prefHeight="50.0" prefWidth="107.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="294.0" layoutY="650.0" mnemonicParsing="false" onAction="#Eliminar" prefHeight="50.0" prefWidth="107.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="548.0" layoutY="650.0" mnemonicParsing="false" onAction="#Editar" prefHeight="50.0" prefWidth="107.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="751.0" layoutY="650.0" mnemonicParsing="false" onAction="#Reporte" prefHeight="50.0" prefWidth="107.0" text="Reporte" />
+      <Label layoutX="226.0" layoutY="232.0" text="Telefono" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtTelefonoContacto" layoutX="361.0" layoutY="227.0" opacity="0.7" prefHeight="25.0" prefWidth="122.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="226.0" layoutY="269.0" text="Grado Cocinero" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtGradoCocinero" layoutX="361.0" layoutY="264.0" opacity="0.7" prefHeight="25.0" prefWidth="122.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Label fx:id="lblTempleado" layoutX="226.0" layoutY="307.0" text="Tipo Empleado" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbTempleado" layoutX="361.0" layoutY="305.0" prefWidth="150.0" />
+      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="45.0" layoutY="25.0" onMouseClicked="#ventanaTempleado">
+         <image>
+            <Image url="@../img/Regresar.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>
